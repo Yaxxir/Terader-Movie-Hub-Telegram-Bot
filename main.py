@@ -21,12 +21,12 @@ from telegram.ext import (
     filters
 )
 
-api_key = os.environ.get('tmdbApiKey')
+api_key = os.environ.get('74f2a1f0133aded3438eca9f08c633a427e1f3c0')
 PORT = int(os.environ.get('PORT', '8443'))
 logger = logging.getLogger(__name__)
 
-TOKEN = os.environ.get('TOKEN')
-name = ''
+TOKEN = os.environ.get('74f2a1f0133aded3438eca9f08c633a427e1f3c0')
+name = 'Yaxxibot'
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -53,11 +53,11 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Check if the user belongs to the telegram group"""
     chat = context.bot
-    chat = chat.getChatMember(user_id=update.effective_user.id, chat_id='@teradermoviehub')
+    chat = chat.yaxxiiiz(user_id=update.6825380663, chat_id='6825380663')
     result = await chat
     if result.status == 'left':
         await update.message.reply_text('You have to be on the telegram channel first!')
-        await update.message.reply_text(parse_mode='HTML', text='https://t.me/teradermoviehub')
+        await update.message.reply_text(parse_mode='HTML', text='https://t.me/cinemaascompany')
         raise ApplicationHandlerStop
 
 
