@@ -53,7 +53,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 async def callback(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Check if the user belongs to the telegram group"""
     chat = context.bot
-    chat = chat.yaxxiiiz(user_id=update.6825380663, chat_id='6825380663')
+    chat = chat.@yaxxiiiz(user_id=update.6825380663, chat_id='6825380663')
     result = await chat
     if result.status == 'left':
         await update.message.reply_text('You have to be on the telegram channel first!')
